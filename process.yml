@@ -1,7 +1,6 @@
 apps:
-  - script   : 'app.js'
+  - script   : 'src/app.js'
     name     : 'bookshop-api'
     exec_mode: 'cluster'
     instances: 2
     watch    : false
-    cwd      : './src/
