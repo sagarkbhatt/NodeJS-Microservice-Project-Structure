@@ -1,0 +1,14 @@
+{
+  "name": "bookshop-api-node",
+  "version": "0.0.1",
+  "description": "Bookshop - API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "sagarkbhatt",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
