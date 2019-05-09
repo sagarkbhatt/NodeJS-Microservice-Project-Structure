@@ -8,12 +8,16 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
+RUN npm install pm2 -g
+ENV NPM_CONFIG_LOGLEVEL warn
+RUN npm install --production
+
+# Show current folder structure in logs
+RUN ls -al -R
 
 # Bundle app source
 COPY . .
 
 EXPOSE 8080
+
 CMD [ "npm", "start" ]

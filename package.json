@@ -2,9 +2,9 @@
   "name": "bookshop-api-node",
   "version": "0.0.1",
   "description": "Bookshop - API",
-  "main": "index.js",
+  "main": "./src/app.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "pm2-runtime --json process.yml"
   },
   "author": "sagarkbhatt",
   "license": "MIT",
