@@ -1,5 +1,5 @@
 apps:
-  - script   : 'src/app.js'
+  - script   : 'src/server.js'
     name     : 'bookshop-api'
     exec_mode: 'cluster'
     instances: 2
