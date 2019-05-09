@@ -4,7 +4,7 @@
   "description": "Bookshop - API",
   "main": "src/app.js",
   "scripts": {
-    "start": "pm2 start process.yml"
+    "start": "pm2-runtime --json process.yml"
   },
   "author": "sagarkbhatt",
   "license": "MIT",
