@@ -1,3 +1,3 @@
-# bookshop-api-node
+# BOOK-SHOP-API: NodeJS
 NodeJS - Example Microservice Project Structure
 
