@@ -7,7 +7,7 @@ services:
     depends_on:
       - mongo
     environment:
-    - MONGO_URI=mongodb://mongodb/book
+      - MONGO_URI=mongodb://mongodb/book
     networks:
       - samplenet
   mongo:
