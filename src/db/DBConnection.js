@@ -1,9 +1,5 @@
 const mongoose = require("mongoose");
 
-console.log('====================');
-console.log(process.env.DATABASE_URL);
-console.log('====================');
-
 const serverURI = process.env.DATABASE_URL || "mongodb://mongo/book";
 
 class DBConnection {
