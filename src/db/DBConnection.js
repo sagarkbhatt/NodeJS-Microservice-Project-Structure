@@ -1,8 +1,12 @@
 const mongoose = require("mongoose");
 
-const serverURI = process.env.DATABASE_URL || "mongodb://mongodb/book";
+console.log('====================');
+console.log(process.env.DATABASE_URL);
+console.log('====================');
 
-class Database {
+const serverURI = process.env.DATABASE_URL || "mongodb://mongo/book";
+
+class DBConnection {
   constructor() {
     this._connect();
   }
@@ -19,4 +23,4 @@ class Database {
   }
 }
 
-module.exports = new Database();
+module.exports = new DBConnection();

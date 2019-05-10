@@ -7,21 +7,12 @@ services:
     depends_on:
       - mongo
     environment:
-      - MONGO_URI=mongodb://mongodb/book
-    networks:
-      - samplenet
+      - DATABASE_URL=mongodb://mongo/book
   mongo:
     image: mongo:latest
     ports:
       - "27017:27017"
     volumes:
       - mongodb:/data/db
-    networks:
-      samplenet:
-        aliases:
-          - "mongodb"
 volumes:
   mongodb:
-networks:
-  samplenet:
-    driver: bridge
