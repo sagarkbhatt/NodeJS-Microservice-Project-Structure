@@ -1,16 +1,27 @@
-version: "2"
+version: '3.3'
 services:
   web:
     build: .
     ports:
-    - "9000:8080"
+      - "9000:8080"
     depends_on:
-    - mongo
+      - mongo
+    environment:
+    - MONGO_URI=mongodb://mongodb/book
+    networks:
+      - samplenet
   mongo:
-    image: mongo
+    image: mongo:latest
     ports:
-    - "27017:27017"
+      - "27017:27017"
     volumes:
-    - data-volume:/data/db
+      - mongodb:/data/db
+    networks:
+      samplenet:
+        aliases:
+          - "mongodb"
 volumes:
-  data-volume:
+  mongodb:
+networks:
+  samplenet:
+    driver: bridge

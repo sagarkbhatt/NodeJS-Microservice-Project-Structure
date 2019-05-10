@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-const server = process.env.DATABASE_URL || "mongodb://mongo:27017";
-const database = "book";
+const serverURI = process.env.DATABASE_URL || "mongodb://mongodb/book";
 
 class Database {
   constructor() {
@@ -9,7 +8,7 @@ class Database {
   }
   _connect() {
     mongoose
-      .connect(`mongodb://${server}/${database}`, { useNewUrlParser: true })
+      .connect(serverURI, { useNewUrlParser: true })
       .then(() => {
         console.log("Database connection successful");
       })
