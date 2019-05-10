@@ -1,4 +1,5 @@
 const app = require("./app");
+const db = require("./db");
 
 app.set("port", process.env.PORT || 8080);
 
